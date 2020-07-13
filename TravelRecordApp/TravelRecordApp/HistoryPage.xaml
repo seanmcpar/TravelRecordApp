@@ -6,10 +6,13 @@
              mc:Ignorable="d"
              x:Class="TravelRecordApp.HistoryPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="History Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView x:Name="postListView"
+                  ItemSelected="postListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Experience}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
